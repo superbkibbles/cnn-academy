@@ -1,0 +1,57 @@
+.footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  direction: ltr;
+}
+
+.info__container {
+  margin-left: auto;
+  color: #fff;
+  padding: 20px 180px 20px 0;
+}
+
+.info {
+  font-weight: normal;
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer__image_block {
+  margin-left: 200px;
+  width: 142px;
+  height: 73px;
+  position: relative;
+}
+
+.footer__cnn_image {
+  width: 365px;
+  height: 121px;
+}
+
+@media screen AND (max-width: 1000px) {
+  .footer__image_block {
+    margin-left: 10px;
+  }
+  .info__container {
+    padding-right: 10px;
+  }
+}
+
+@media screen AND (max-width: 420px) {
+  .info__container {
+    padding: 10px 15px;
+  }
+  .info {
+    font-size: 16px;
+  }
+}
+
+@media screen AND (max-width: 366px) {
+  .info__container {
+    padding: 0 10px;
+  }
+  .info {
+    font-size: 14px;
+  }
+}

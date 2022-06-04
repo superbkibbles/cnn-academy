@@ -1,9 +1,15 @@
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@font-face {
+  font-family: "Dubai-Regular";
+  src: url("/fonts/Dubai-Regular.ttf");
 }
 
 a {
@@ -13,4 +19,265 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.heading-2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: #707070;
+}
+
+.section {
+  padding: 127px 201px;
+}
+
+@media screen AND (max-width: 1100px) {
+  .section {
+    padding: 70px 100px;
+  }
+}
+
+@media screen AND (max-width: 600px) {
+  .section {
+    padding: 50px 20px;
+  }
+}
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+
+.logo-absolute {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 11;
+}
+
+.inner-logo {
+  width: 30px;
+}
+.inner-title {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* MAIN SECTION */
+
+.intro-footer {
+  height: 20%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.intro-footer > p {
+  margin: 0;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+/* COURSE SECTION */
+
+/* NEWSROOM SECTION */
+
+.header {
+  height: 30vh;
+  position: relative;
+  margin-bottom: 80px;
+  background-color: rgb(247, 176, 84);
+}
+
+.header-title {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 26px;
+  font-weight: 700;
+  z-index: 11;
+}
+
+.information {
+  height: 70vh;
+}
+
+/* ASIDE */
+.apply {
+  display: flex;
+}
+.aside {
+  min-width: 200px;
+  width: 100%;
+  max-width: 30%;
+  height: 100%;
+  position: relative;
+  background-color: rgb(247, 176, 84);
+}
+
+.apply-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.content {
+  width: 100%;
+}
+
+.inner-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caption {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.list > li {
+  margin-left: 15px;
+  list-style: square;
+  line-height: 40px;
+}
+
+/* SIX SECTION */
+.selection {
+  width: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Erbil_Minaret%2C_Erbil%2C_Kurdistan_Region_of_Iraq.JPG/1200px-Erbil_Minaret%2C_Erbil%2C_Kurdistan_Region_of_Iraq.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-caption {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.info-block {
+  max-width: 300px;
+  width: 100%;
+  background-color: red;
+  color: #ffffff;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.inner-info > p {
+  margin: 0;
+}
+
+.inner-info {
+  margin-bottom: 22px;
+}
+
+.info-title {
+  font-size: 30px;
+}
+
+/*  */
+.structure > .header {
+  margin-bottom: 0px;
+}
+
+/*  */
+#schedules {
+  width: 100%;
+}
+#schedules tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.day {
+  width: 30%;
+  text-align: right;
+  padding-right: 20px;
+  padding: 7px 20px 7px 0;
+}
+
+.event {
+  width: 70%;
+  padding: 7px 0px 7px 20px;
+}
+
+.last {
+  background-color: red !important;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.pricing {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  background-color: rgb(197, 194, 194);
+}
+
+.split-block {
+  display: flex;
+}
+.split-block > div {
+  padding-left: 50px;
+  width: 50%;
+  border-right: 1px solid rgb(173, 173, 173);
+}
+
+/*  */
+
+@media screen and (max-width: 1335px) {
+  .container {
+    width: 850px;
+  }
 }

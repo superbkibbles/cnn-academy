@@ -1,0 +1,32 @@
+.applyArea {
+  padding: 60px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+}
+
+.applyBtn {
+  min-width: 200px;
+  min-height: 50px;
+  background-color: #df2127;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+}
+
+@media screen AND (max-width: 1000px) {
+  .applyArea {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen AND (max-width: 605px) {
+  .applyArea {
+    padding: 20px;
+  }
+}

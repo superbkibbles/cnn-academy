@@ -1,0 +1,54 @@
+.applyDate {
+  width: 100%;
+  background-image: url("/images/applyDate.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.applyDate__heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.applyDateContainer {
+  display: inline-block;
+  background-color: #df2127;
+  padding: 40px 50px;
+}
+
+.container {
+  padding: 60px 200px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen AND (max-width: 1300px) {
+  .applyDate {
+    background-image: url("/images/applyDateMobile.jpg");
+  }
+}
+
+@media screen AND (max-width: 750px) {
+  .applyDate {
+    justify-content: center;
+  }
+  .container {
+    padding: 0;
+  }
+}
+
+@media screen AND (max-width: 550px) {
+  .container {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
