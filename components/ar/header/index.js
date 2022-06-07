@@ -161,15 +161,14 @@ const Header = () => {
                 whileInView={{ opacity: [0, 1], x: [10, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                Step into professional journalism by training with the domain’s
-                leader
+                ابدأ مسيرتك الصحفيّة بتدريب من قادة المهنة
               </motion.h2>
               <motion.h3
                 whileInView={{ opacity: [0, 1], x: [-10, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                CNN shares its trade secrets with aspiring journalists in Iraq
-                through an 11-week course
+                CNN تشارك أسرار المهنة مع الصحفيين الطموحين في العراق عبر دورة
+                مدتها 12 أسبوعاً
               </motion.h3>
             </div>
             {/* <div className={styles.header__apply}>
