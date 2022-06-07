@@ -169,7 +169,7 @@ const Header = () => {
                 transition={{ duration: 0.5 }}
               >
                 CNN shares its trade secrets with aspiring journalists in Iraq
-                through an 11-week course
+                through an 12-week course
               </motion.h3>
             </div>
             {/* <div className={styles.header__apply}>
