@@ -75,10 +75,10 @@ const Header = () => {
               <li variants={item}>
                 <Link href="/cnn-academy">English</Link>
               </li>
-              <li variants={item}>
+              <li variants={item} className={styles.active}>
                 <Link href="/cnn-academy/kur">Kurdish</Link>
               </li>
-              <li variants={item} className={styles.active}>
+              <li variants={item}>
                 <Link href="/cnn-academy/ar">Arabic</Link>
               </li>
             </motion.ul>
@@ -117,10 +117,10 @@ const Header = () => {
                 <li>
                   <Link href="/cnn-academy">English</Link>
                 </li>
-                <li>
+                <li className={styles.active}>
                   <Link href="/cnn-academy/kur">Kurdish</Link>
                 </li>
-                <li className={styles.active}>
+                <li>
                   <Link href="/cnn-academy/ar">Arabic</Link>
                 </li>
               </ul>
