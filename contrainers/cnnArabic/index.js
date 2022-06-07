@@ -8,30 +8,30 @@ import Overview from "../../components/ar/overview";
 import Pricing from "../../components/ar/pricing";
 import Skills from "../../components/ar/skills";
 import Structure from "../../components/ar/structure";
+import Certificate from "../../components/ar/certificate";
 
 const CnnArabic = () => {
   return (
     <div>
-      {/* Header */}
       <Header />
-      {/* <!-- SECOND --> */}
+
       <Overview />
 
-      {/* About CNN */}
+      <Skills />
+
       <AboutCnn />
 
-      {/* Skills */}
-      <Skills />
+      <Certificate />
+
+      <Structure />
 
       <Apply />
 
       <ApplyDate />
 
-      <Structure />
-
       <Pricing />
 
-      <ApplyArea />
+      {/* <ApplyArea /> */}
 
       <Footer />
     </div>

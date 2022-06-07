@@ -2,6 +2,7 @@ import AboutCnn from "../../components/en/aboutCnn";
 import Apply from "../../components/en/apply";
 import ApplyArea from "../../components/en/applyArea";
 import ApplyDate from "../../components/en/applyDate";
+import Certificate from "../../components/en/certificate";
 import Footer from "../../components/en/footer";
 import Header from "../../components/en/header";
 import Overview from "../../components/en/overview";
@@ -13,21 +14,24 @@ const CnnEnglish = () => {
   return (
     <div>
       <Header />
+
       <Overview />
+
+      <Skills />
 
       <AboutCnn />
 
-      <Skills />
+      <Certificate />
+
+      <Structure />
 
       <Apply />
 
       <ApplyDate />
 
-      <Structure />
-
       <Pricing />
 
-      <ApplyArea />
+      {/* <ApplyArea /> */}
 
       <Footer />
     </div>

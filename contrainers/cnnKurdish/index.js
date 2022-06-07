@@ -8,30 +8,30 @@ import Overview from "../../components/kur/overview";
 import Pricing from "../../components/kur/pricing";
 import Skills from "../../components/kur/skills";
 import Structure from "../../components/kur/structure";
+import Certificate from "../../components/kur/certificate";
 
 const CnnKurdish = () => {
   return (
     <div>
-      {/* Header */}
       <Header />
-      {/* <!-- SECOND --> */}
+
       <Overview />
 
-      {/* About CNN */}
+      <Skills />
+
       <AboutCnn />
 
-      {/* Skills */}
-      <Skills />
+      <Certificate />
+
+      <Structure />
 
       <Apply />
 
       <ApplyDate />
 
-      <Structure />
-
       <Pricing />
 
-      <ApplyArea />
+      {/* <ApplyArea /> */}
 
       <Footer />
     </div>
