@@ -4,7 +4,7 @@ import styles from "./apply.module.css";
 
 const Apply = () => {
   return (
-    <section className={styles.skills} id="apply">
+    <section className={styles.skills}>
       <div className={styles.skills__container}>
         <h2 className="heading-2">Who Can Apply? </h2>
         <p className="paragraph">

@@ -42,15 +42,23 @@
     padding: 10px 15px;
   }
   .info {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .footer__image_block {
+    width: 120px;
+    height: 73px;
+    position: relative;
   }
 }
 
-@media screen AND (max-width: 366px) {
-  .info__container {
-    padding: 0 10px;
+@media screen AND (max-width: 380px) {
+  .footer__image_block {
+    width: 80px;
+    height: 73px;
+    position: relative;
   }
   .info {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

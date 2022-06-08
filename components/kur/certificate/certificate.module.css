@@ -1,0 +1,37 @@
+.certificate {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  flex: 0.5;
+  padding: 60px 200px 60px 50px;
+}
+
+.right {
+  flex: 1;
+  background-image: url("/images/certificate.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+@media screen AND (max-width: 1100px) {
+  .left {
+    flex: 0.5;
+    padding: 60px 50px 60px 100px;
+  }
+}
+
+@media screen AND (max-width: 800px) {
+  .certificate {
+    flex-direction: column;
+  }
+  .left {
+    flex: 0.5;
+    padding: 0 30px;
+    padding-bottom: 20px;
+  }
+}

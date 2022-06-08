@@ -2,7 +2,7 @@ import styles from "./applyDate.module.css";
 
 const ApplyDate = () => {
   return (
-    <section className={styles.applyDate}>
+    <section className={styles.applyDate} id="apply">
       <div className={styles.container}>
         <div className={styles.applyDateContainer}>
           <h2
@@ -34,6 +34,19 @@ const ApplyDate = () => {
             <span style={{ fontWeight: "normal" }}>ئابی</span>
             ٢٠٢٢
           </h2>
+        </div>
+      </div>
+
+      <div className={styles.footer}>
+        <p className={styles.footerText}>
+          ەم کەس ئەو دەرفەتەیان دەست دەکەوێت کە شایەدی مێژوو بن کە لەبەر چاویان
+          دەردەکەوێت. ڕێگا بۆ ئەم دەرفەتە بۆ تۆ بەردەستە ئێستا و لەلایەن
+          ڕابەرەکانی کاری ڕۆژنامەوانی. خێراکە خۆت تۆمارکە.
+        </p>
+        <div className={styles.btnContainer}>
+          <a className={styles.apply_btn} href="#overview">
+            تقديم
+          </a>
         </div>
       </div>
     </section>

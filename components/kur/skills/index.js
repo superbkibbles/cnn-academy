@@ -6,11 +6,7 @@ const Skills = () => {
   return (
     <section className={styles.skills}>
       <div className={styles.skills__container}>
-        <h2 className="heading-2">تواناکانت بەکاربھێنە</h2>
-        <p className="paragraph">
-          لەماوەی نمونەی ھاوشێوەی ژووری هەواڵی ئەکادیمیای سی ئێن ئێن، تۆ:
-        </p>
-
+        <h2 className="heading-2">لە کۆتایی کۆرسەکەدا تۆ:</h2>
         <ul className={styles.skills__list_container}>
           <li>
             لە شێوازی کارکردنی ژووری هەواڵ تێدەگەی لە کاتی رووماڵکردنی هەواڵە
@@ -35,6 +31,7 @@ const Skills = () => {
             فێردەبیت چۆن کاربکەیت لەژێر فشاری کاتی کەم و هەبوونی سەرچاوەی
             سنووردار.
           </li>
+          <li>بڕوانامەی تەواوکردنی کۆرس وەردەگری</li>
         </ul>
       </div>
       <div className={styles.skills__imageContainer}>

@@ -2,7 +2,7 @@ import styles from "./applyDate.module.css";
 
 const ApplyDate = () => {
   return (
-    <section className={styles.applyDate}>
+    <section className={styles.applyDate} id="apply">
       <div className={styles.container}>
         <div className={styles.applyDateContainer}>
           <h2
@@ -31,6 +31,19 @@ const ApplyDate = () => {
             <span style={{ fontWeight: "normal" }}>August </span>
             2022
           </h2>
+        </div>
+      </div>
+
+      <div className={styles.footer}>
+        <p className={styles.footerText}>
+          Few have the opportunity to witness history as it unfolds before their
+          eyes. The path to this opportunity is available to you now and from
+          the leaders of the journalism profession. Hurry up to apply.
+        </p>
+        <div className={styles.btnContainer}>
+          <a className={styles.apply_btn} href="#overview">
+            Apply
+          </a>
         </div>
       </div>
     </section>

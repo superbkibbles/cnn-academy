@@ -56,13 +56,13 @@ const Header = () => {
               className={styles.mobileNavigation__links}
             >
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#overview">Course Overview</Link>
+                <Link href="#overview">پوختەی کۆرس</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#structure">Course Structure</Link>
+                <Link href="#structure">پێکهاتەی کۆرس</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">Apply</Link>
+                <Link href="#apply">تقديم</Link>
               </motion.li>
             </motion.ul>
 
@@ -73,13 +73,13 @@ const Header = () => {
               animate="show"
             >
               <li variants={item}>
-                <Link href="/cnn-academy">English</Link>
+                <Link href="/cnn-academy">ئینگلیزی</Link>
               </li>
               <li variants={item} className={styles.active}>
-                <Link href="/cnn-academy/kur">Kurdish</Link>
+                <Link href="/cnn-academy/kur">كرودى</Link>
               </li>
               <li variants={item}>
-                <Link href="/cnn-academy/ar">Arabic</Link>
+                <Link href="/cnn-academy/ar">عەرەبی</Link>
               </li>
             </motion.ul>
           </motion.div>
@@ -99,29 +99,29 @@ const Header = () => {
               <ul className={styles.navigation}>
                 <li>
                   <Link href="#overview">
-                    <a>Course Overview</a>
+                    <a>پوختەی کۆرس</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#structure">
-                    <a>Course Structure</a>
+                    <a>پێکهاتەی کۆرس</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#apply">
-                    <a>Apply</a>
+                    <a>تقديم</a>
                   </Link>
                 </li>
               </ul>
               <ul className={styles.language__container}>
                 <li>
-                  <Link href="/cnn-academy">English</Link>
+                  <Link href="/cnn-academy">ئینگلیزی</Link>
                 </li>
                 <li className={styles.active}>
-                  <Link href="/cnn-academy/kur">Kurdish</Link>
+                  <Link href="/cnn-academy/kur">كرودى</Link>
                 </li>
                 <li>
-                  <Link href="/cnn-academy/ar">Arabic</Link>
+                  <Link href="/cnn-academy/ar">عەرەبی</Link>
                 </li>
               </ul>
             </nav>
@@ -161,15 +161,15 @@ const Header = () => {
                 whileInView={{ opacity: [0, 1], x: [10, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                Step into professional journalism by training with the domain’s
-                leader
+                کەم کەس ئەو دەرفەتەیان دەست دەکەوێت کە شایەدی مێژوو بن کە لەبەر
+                چاویان دەردەکەوێت
               </motion.h2>
               <motion.h3
                 whileInView={{ opacity: [0, 1], x: [-10, 0] }}
                 transition={{ duration: 0.5 }}
               >
-                CNN shares its trade secrets with aspiring journalists in Iraq
-                through an 11-week course
+                ڕێگا بۆ ئەم دەرفەتە بۆ تۆ بەردەستە ئێستا و لەلایەن ڕابەرەکانی
+                کاری ڕۆژنامەوانی. خێراکە خۆت تۆمارکە
               </motion.h3>
             </div>
             {/* <div className={styles.header__apply}>

@@ -56,13 +56,13 @@ const Header = () => {
               className={styles.mobileNavigation__links}
             >
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#overview">Course Overview</Link>
+                <Link href="#overview">ملخص الدورة</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#structure">Course Structure</Link>
+                <Link href="#structure">هيكل الدورة</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">Apply</Link>
+                <Link href="#apply">تقديم</Link>
               </motion.li>
             </motion.ul>
 
@@ -73,13 +73,13 @@ const Header = () => {
               animate="show"
             >
               <li variants={item}>
-                <Link href="/cnn-academy">English</Link>
+                <Link href="/cnn-academy">الإنجليزية</Link>
               </li>
               <li variants={item}>
-                <Link href="/cnn-academy/kur">Kurdish</Link>
+                <Link href="/cnn-academy/kur">كردي</Link>
               </li>
               <li variants={item} className={styles.active}>
-                <Link href="/cnn-academy/ar">Arabic</Link>
+                <Link href="/cnn-academy/ar">عربى</Link>
               </li>
             </motion.ul>
           </motion.div>
@@ -99,29 +99,29 @@ const Header = () => {
               <ul className={styles.navigation}>
                 <li>
                   <Link href="#overview">
-                    <a>Course Overview</a>
+                    <a>ملخص الدورة</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#structure">
-                    <a>Course Structure</a>
+                    <a>هيكل الدورة</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#apply">
-                    <a>Apply</a>
+                    <a>تقديم</a>
                   </Link>
                 </li>
               </ul>
               <ul className={styles.language__container}>
                 <li>
-                  <Link href="/cnn-academy">English</Link>
+                  <Link href="/cnn-academy">الإنجليزية</Link>
                 </li>
                 <li>
-                  <Link href="/cnn-academy/kur">Kurdish</Link>
+                  <Link href="/cnn-academy/kur">كردي</Link>
                 </li>
                 <li className={styles.active}>
-                  <Link href="/cnn-academy/ar">Arabic</Link>
+                  <Link href="/cnn-academy/ar">عربى</Link>
                 </li>
               </ul>
             </nav>

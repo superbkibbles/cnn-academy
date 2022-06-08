@@ -1,50 +1,12 @@
-/* .applyDate {
-  width: 100%;
-  background-image: url("/images/applyDate.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 60vh;
-  transform: scaleX(-1);
-}
-
-.applyDate__heading {
-  transform: scaleX(-1);
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.container {
-  padding: 60px 200px;
-}
-
-@media screen AND (max-width: 550px) {
-  .container {
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-} */
-
 .applyDate {
   width: 100%;
-  background-image: url("/images/applyDate.jpg");
+  background-image: url("/images/applyDateMobile.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  transform: scaleX(-1);
-  justify-content: flex-end;
 }
 
 .applyDate__heading {
-  transform: scaleX(-1);
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -57,14 +19,60 @@
 }
 
 .container {
-  padding: 60px 200px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 43px 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerText {
+  color: #fff;
+  font-size: 16px;
 }
 
 @media screen AND (max-width: 1300px) {
   .applyDate {
-    background-image: url("/images/applyDateMobile.jpg");
+    background-image: url("/images/applyDateMobile.png");
+  }
+}
+
+.btnContainer {
+  /* height: 20%; */
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.apply_btn {
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 7px 40px 17px 40px; */
+  background-color: #df2127;
+}
+
+@media screen AND (max-width: 1100px) {
+  .footer {
+    padding: 43px 100px;
   }
 }
 
@@ -73,20 +81,20 @@
     justify-content: center;
   }
   .container {
-    padding: 0;
-  }
-  .applyDateContainer {
-    padding: 20px 30px;
+    /* padding: 0; */
   }
 }
 
 @media screen AND (max-width: 550px) {
   .container {
-    padding: 0;
+    /* padding: 0; */
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  .footer {
+    padding: 10px;
   }
 }

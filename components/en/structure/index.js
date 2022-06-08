@@ -70,15 +70,13 @@ const Structure = () => {
               seminar)
             </li>
             <li>
-              <span style={{ fontWeight: "bold" }}>
-                Week Nine, November 7th
-              </span>{" "}
+              <span style={{ fontWeight: "bold" }}>Week Ten, November 7th</span>{" "}
               Writing for TV News & Scriptwriting (CNN Academy Hub course +
               virtual live seminar)
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                Week Ten, November 14th
+                Week Eleven, November 14th
               </span>{" "}
               Mobile Storytelling & Editing (CNN Academy Hub course + virtual
               live seminar)

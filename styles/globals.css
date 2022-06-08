@@ -38,8 +38,13 @@ img {
 }
 
 .heading-2 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
+}
+
+.heading-3 {
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .paragraph {

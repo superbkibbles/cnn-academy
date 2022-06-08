@@ -2,7 +2,7 @@ import styles from "./structure.module.css";
 
 const Structure = () => {
   return (
-    <section className={styles.applyDate}>
+    <section className={styles.applyDate} id="structure">
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <h2 className={styles.applyDate__heading}>پێکهاتەی کۆرس</h2>
@@ -76,14 +76,14 @@ const Structure = () => {
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                ھەفتەی نۆیەم، ٧ی تشرینی دووەم
+                ھەفتەی دەیەم، ٧ی تشرینی دووەم
               </span>{" "}
               نووسین بۆ هەواڵی تەلەفزیۆن و نووسینی دەق (کۆرسی تەوەرەی ئەکادیمیای
               سی ئێن ئێن+ سیمیناری لایڤی ئۆنلاین)
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                ھەفتەی دەیەم، ١٤ی تشرینی دووەم
+                ھەفتەی يازدەیەم، ١٤ی تشرینی دووەم
               </span>{" "}
               گێرانەوەی چیڕۆک لە ڕێگەی مۆبایلەوە و مۆنتاژکردن (کۆرسی تەوەرەی
               ئەکادیمیای سی ئێن ئێن+ سیمیناری لایڤی ئۆنلاین)

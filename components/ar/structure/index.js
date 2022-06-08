@@ -2,7 +2,7 @@ import styles from "./structure.module.css";
 
 const Structure = () => {
   return (
-    <section className={styles.applyDate}>
+    <section className={styles.applyDate} id="structure">
       <div className={styles.wrraper}>
         <div className={styles.container}>
           <h2 className={styles.applyDate__heading}>هيكل الدورة</h2>
@@ -69,14 +69,14 @@ const Structure = () => {
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                الأسبوع التاسع، 7 نوفمبر
+                الأسبوع العاشر، 7 نوفمبر
               </span>{" "}
               الكتابة للأخبار التلفزيونية وكتابة السيناريو (دورة أكاديمية CNN +
               ندوة افتراضية مباشرة)
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                الأسبوع العاشر، 14 تشرين الثاني (نوفمبر)
+                الأسبوع الحادي عشر، 14 تشرين الثاني (نوفمبر)
               </span>{" "}
               رواية القصص على الهاتف المحمول وتحريرها (دورة CNN Academy Hub +
               ندوة حية افتراضية)
