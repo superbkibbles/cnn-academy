@@ -80,9 +80,9 @@
   .applyDate {
     justify-content: center;
   }
-  .container {
-    /* padding: 0; */
-  }
+  /* .container { */
+  /* padding: 0; */
+  /* } */
 }
 
 @media screen AND (max-width: 550px) {
