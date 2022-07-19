@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./applyDate.module.css";
 
 const ApplyDate = () => {
@@ -18,8 +20,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 30 }}
             className={styles.applyDate__heading}
           >
-            1 <span style={{ fontWeight: "normal" }}>June</span> 2022 – 15{" "}
-            <span style={{ fontWeight: "normal" }}>July </span>
+            <span style={{ fontWeight: "normal" }}>June</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> July </span>
             2022
           </h2>
 
@@ -27,8 +29,8 @@ const ApplyDate = () => {
             Selection:
           </h2>
           <h2 style={{ marginTop: 0 }} className={styles.applyDate__heading}>
-            15 <span style={{ fontWeight: "normal" }}>July</span> 2022 – 15{" "}
-            <span style={{ fontWeight: "normal" }}>August </span>
+            <span style={{ fontWeight: "normal" }}>July</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> August </span>
             2022
           </h2>
         </div>
@@ -41,9 +43,16 @@ const ApplyDate = () => {
           the leaders of the journalism profession. Hurry up to apply.
         </p>
         <div className={styles.btnContainer}>
-          <a className={styles.apply_btn} href="#overview">
-            Apply
-          </a>
+          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
+          <Link href="/cnn-academy/application">
+            <a
+              // target="_blank"
+              // rel="noopener noreferrer"
+              className={styles.apply_btn}
+            >
+              Apply
+            </a>
+          </Link>
         </div>
       </div>
     </section>

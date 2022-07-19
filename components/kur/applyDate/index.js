@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./applyDate.module.css";
 
 const ApplyDate = () => {
@@ -18,8 +20,10 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            لە ١ی <span style={{ fontWeight: "normal" }}>حوزەیرانی</span> ٢٠٢٢ –
-            ١٥ی<span style={{ fontWeight: "normal" }}>تەمموزی </span>
+            <span style={{ fontWeight: "normal" }}>حوزەیرانی</span> ٢٠٢٢ -
+            <span style={{ fontWeight: "normal", marginRight: 5 }}>
+              تەمموزی{" "}
+            </span>
             ٢٠٢٢
           </h2>
 
@@ -30,8 +34,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            ١٥ی <span style={{ fontWeight: "normal" }}>تەمموزی</span> ٢٠٢٢- ١٥{" "}
-            <span style={{ fontWeight: "normal" }}>ئابی</span>
+            <span style={{ fontWeight: "normal" }}>تەمموزی</span> ٢٠٢٢ -
+            <span style={{ fontWeight: "normal" }}> ئابی</span>
             ٢٠٢٢
           </h2>
         </div>
@@ -39,14 +43,21 @@ const ApplyDate = () => {
 
       <div className={styles.footer}>
         <p className={styles.footerText}>
-          کەم کەس ئەو دەرفەتەیان دەست دەکەوێت کە شایەدی مێژوو بن کە لەبەر چاویان
-          دەردەکەوێت. ڕێگا بۆ ئەم دەرفەتە بۆ تۆ بەردەستە ئێستا و لەلایەن
-          ڕابەرەکانی کاری ڕۆژنامەوانی. خێراکە خۆت تۆمارکە.
+          کەمن ئەو کەسانەی دەرفەتی ئەوەیان بۆ دەرەخسێت گۆڕانی مێژوو بە چاوی
+          خۆیان ببینن. ئێستا تۆ ئەو دەرفەتەت ھەیە تاوەکو رێگەی رابەرانی کایەی
+          راگەیاندن بگریت. زوو خۆت تۆمار بکە
         </p>
         <div className={styles.btnContainer}>
-          <a className={styles.apply_btn} href="#overview">
-            تقديم
-          </a>
+          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
+          <Link href="/cnn-academy/application">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.apply_btn}
+            >
+              جێبەجێ بکە
+            </a>
+          </Link>
         </div>
       </div>
     </section>

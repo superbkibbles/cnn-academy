@@ -47,7 +47,7 @@
 
 .structureList li {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1.3fr 4fr;
   grid-template-rows: 1fr;
   gap: 0px 20px;
   grid-template-areas: ". .";
@@ -82,7 +82,7 @@
   font-weight: bold;
   color: #fff;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1.3fr 4fr;
   grid-template-rows: 1fr;
   gap: 0px 20px;
   grid-template-areas: ". .";

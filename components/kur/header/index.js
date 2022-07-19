@@ -62,7 +62,7 @@ const Header = () => {
                 <Link href="#structure">پێکهاتەی کۆرس</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">تقديم</Link>
+                <Link href="#apply">جێبەجێ بکە</Link>
               </motion.li>
             </motion.ul>
 
@@ -73,10 +73,10 @@ const Header = () => {
               animate="show"
             >
               <li variants={item}>
-                <Link href="/cnn-academy">ئینگلیزی</Link>
+                <Link href="/cnn-academy/en">ئینگلیزی</Link>
               </li>
               <li variants={item} className={styles.active}>
-                <Link href="/cnn-academy/kur">كرودى</Link>
+                <Link href="/cnn-academy/kur">كوردى</Link>
               </li>
               <li variants={item}>
                 <Link href="/cnn-academy/ar">عەرەبی</Link>
@@ -109,16 +109,16 @@ const Header = () => {
                 </li>
                 <li>
                   <Link href="#apply">
-                    <a>تقديم</a>
+                    <a>جێبەجێ بکە</a>
                   </Link>
                 </li>
               </ul>
               <ul className={styles.language__container}>
                 <li>
-                  <Link href="/cnn-academy">ئینگلیزی</Link>
+                  <Link href="/cnn-academy/en">ئینگلیزی</Link>
                 </li>
                 <li className={styles.active}>
-                  <Link href="/cnn-academy/kur">كرودى</Link>
+                  <Link href="/cnn-academy/kur">كوردى</Link>
                 </li>
                 <li>
                   <Link href="/cnn-academy/ar">عەرەبی</Link>
@@ -189,7 +189,7 @@ const Header = () => {
               className={styles.header__apply}
             >
               <a className={styles.apply_btn} href="#overview">
-                المزيد
+                زیاتر بزانە
               </a>
             </motion.div>
           </div>

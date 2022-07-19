@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./applyDate.module.css";
 
 const ApplyDate = () => {
@@ -18,8 +20,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            1 <span style={{ fontWeight: "normal" }}>حزيران </span> 2022 – 15{" "}
-            <span style={{ fontWeight: "normal" }}>تموز </span>
+            <span style={{ fontWeight: "normal" }}>حزيران </span> 2022 -
+            <span style={{ fontWeight: "normal" }}> تموز </span>
             2022
           </h2>
 
@@ -30,8 +32,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 30 }}
             className={styles.applyDate__heading}
           >
-            15 <span style={{ fontWeight: "normal" }}>تموز</span> 2022 – 15{" "}
-            <span style={{ fontWeight: "normal" }}>آب</span>
+            <span style={{ fontWeight: "normal" }}>تموز</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> آب</span>
             2022
           </h2>
         </div>
@@ -44,9 +46,16 @@ const ApplyDate = () => {
           سارعوا بالتسجيل.
         </p>
         <div className={styles.btnContainer}>
-          <a className={styles.apply_btn} href="#overview">
-            تقديم
-          </a>
+          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
+          <Link href="/cnn-academy/application">
+            <a
+              // target="_blank"
+              // rel="noopener noreferrer"
+              className={styles.apply_btn}
+            >
+              تقديم
+            </a>
+          </Link>
         </div>
       </div>
     </section>

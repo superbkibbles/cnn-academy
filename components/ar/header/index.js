@@ -73,7 +73,7 @@ const Header = () => {
               animate="show"
             >
               <li variants={item}>
-                <Link href="/cnn-academy">الإنجليزية</Link>
+                <Link href="/cnn-academy/en">الإنجليزية</Link>
               </li>
               <li variants={item}>
                 <Link href="/cnn-academy/kur">كردي</Link>
@@ -115,7 +115,7 @@ const Header = () => {
               </ul>
               <ul className={styles.language__container}>
                 <li>
-                  <Link href="/cnn-academy">الإنجليزية</Link>
+                  <Link href="/cnn-academy/en">الإنجليزية</Link>
                 </li>
                 <li>
                   <Link href="/cnn-academy/kur">كردي</Link>

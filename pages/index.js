@@ -6,7 +6,7 @@ import Router from "next/router";
 const Home = () => {
   useEffect(() => {
     Router.push({
-      pathname: "cnn-academy",
+      pathname: "cnn-academy/en",
     });
   }, []);
   return (

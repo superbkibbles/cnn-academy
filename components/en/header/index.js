@@ -73,7 +73,7 @@ const Header = () => {
               animate="show"
             >
               <li variants={item} className={styles.active}>
-                <Link href="/cnn-academy">English</Link>
+                <Link href="/cnn-academy/en">English</Link>
               </li>
               <li variants={item}>
                 <Link href="/cnn-academy/kur">Kurdish</Link>
@@ -115,7 +115,7 @@ const Header = () => {
               </ul>
               <ul className={styles.language__container}>
                 <li className={styles.active}>
-                  <Link href="/cnn-academy">English</Link>
+                  <Link href="/cnn-academy/en">English</Link>
                 </li>
                 <li>
                   <Link href="/cnn-academy/kur">Kurdish</Link>
@@ -169,7 +169,7 @@ const Header = () => {
                 transition={{ duration: 0.5 }}
               >
                 CNN shares its trade secrets with aspiring journalists in Iraq
-                through an 12-week course
+                through a 12-week course
               </motion.h3>
             </div>
             {/* <div className={styles.header__apply}>
