@@ -20,8 +20,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 30 }}
             className={styles.applyDate__heading}
           >
-            <span style={{ fontWeight: "normal" }}>June</span> 2022 -
-            <span style={{ fontWeight: "normal" }}> July </span>
+            <span style={{ fontWeight: "normal" }}>July</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> 20 August </span>
             2022
           </h2>
 
@@ -29,8 +29,8 @@ const ApplyDate = () => {
             Selection:
           </h2>
           <h2 style={{ marginTop: 0 }} className={styles.applyDate__heading}>
-            <span style={{ fontWeight: "normal" }}>July</span> 2022 -
-            <span style={{ fontWeight: "normal" }}> August </span>
+            <span style={{ fontWeight: "normal" }}>August</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> September </span>
             2022
           </h2>
         </div>

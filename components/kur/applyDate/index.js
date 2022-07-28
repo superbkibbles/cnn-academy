@@ -20,9 +20,9 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            <span style={{ fontWeight: "normal" }}>حوزەیرانی</span> ٢٠٢٢ -
+            <span style={{ fontWeight: "normal" }}>تەمموزی</span> ٢٠٢٢ -
             <span style={{ fontWeight: "normal", marginRight: 5 }}>
-              تەمموزی{" "}
+              ٢٠ ئاب{" "}
             </span>
             ٢٠٢٢
           </h2>
@@ -34,8 +34,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            <span style={{ fontWeight: "normal" }}>تەمموزی</span> ٢٠٢٢ -
-            <span style={{ fontWeight: "normal" }}> ئابی</span>
+            <span style={{ fontWeight: "normal" }}>آب</span> ٢٠٢٢ -
+            <span style={{ fontWeight: "normal" }}> ئەیلول </span>
             ٢٠٢٢
           </h2>
         </div>

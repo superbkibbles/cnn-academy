@@ -22,7 +22,7 @@ const item = {
   show: { opacity: 1 },
 };
 
-const Header = () => {
+const Header = ({ title }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -56,13 +56,18 @@ const Header = () => {
               className={styles.mobileNavigation__links}
             >
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#overview">پوختەی کۆرس</Link>
+                <Link href="/cnn-academy/kur#overview">پوختەی کۆرس</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#structure">پێکهاتەی کۆرس</Link>
+                <Link href="/cnn-academy/kur#structure">پێکهاتەی کۆرس</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">جێبەجێ بکە</Link>
+                <Link href="/cnn-academy/kur#apply">جێبەجێ بکە</Link>
+              </motion.li>
+              <motion.li variants={item} onClick={() => setToggle(false)}>
+                <Link href="/cnn-academy/kur/pressrelease">
+                  بەیاننامەی ڕۆژنامەوانی
+                </Link>
               </motion.li>
             </motion.ul>
 
@@ -98,18 +103,23 @@ const Header = () => {
             <nav className={styles.nav}>
               <ul className={styles.navigation}>
                 <li>
-                  <Link href="#overview">
+                  <Link href="/cnn-academy/kur#overview">
                     <a>پوختەی کۆرس</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#structure">
+                  <Link href="/cnn-academy/kur#structure">
                     <a>پێکهاتەی کۆرس</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#apply">
+                  <Link href="/cnn-academy/kur#apply">
                     <a>جێبەجێ بکە</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cnn-academy/kur/pressrelease">
+                    <a>بەیاننامەی ڕۆژنامەوانی</a>
                   </Link>
                 </li>
               </ul>
@@ -156,22 +166,35 @@ const Header = () => {
               </motion.div>
             </div>
 
-            <div className={styles.slogan}>
-              <motion.h2
-                whileInView={{ opacity: [0, 1], x: [10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                کەم کەس ئەو دەرفەتەیان دەست دەکەوێت کە شایەدی مێژوو بن کە لەبەر
-                چاویان دەردەکەوێت
-              </motion.h2>
-              <motion.h3
-                whileInView={{ opacity: [0, 1], x: [-10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                ڕێگا بۆ ئەم دەرفەتە بۆ تۆ بەردەستە ئێستا و لەلایەن ڕابەرەکانی
-                کاری ڕۆژنامەوانی. خێراکە خۆت تۆمارکە
-              </motion.h3>
-            </div>
+            {title ? (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                  style={{ fontSize: 26 }}
+                >
+                  {title}
+                </motion.h2>
+              </div>
+            ) : (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  کەم کەس ئەو دەرفەتەیان دەست دەکەوێت کە شایەدی مێژوو بن کە
+                  لەبەر چاویان دەردەکەوێت
+                </motion.h2>
+                <motion.h3
+                  whileInView={{ opacity: [0, 1], x: [-10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  ڕێگا بۆ ئەم دەرفەتە بۆ تۆ بەردەستە ئێستا و لەلایەن ڕابەرەکانی
+                  کاری ڕۆژنامەوانی. خێراکە خۆت تۆمارکە
+                </motion.h3>
+              </div>
+            )}
+
             {/* <div className={styles.header__apply}>
             <a
               target={"_blank"}

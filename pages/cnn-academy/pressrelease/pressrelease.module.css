@@ -1,0 +1,51 @@
+.pressRelease {
+  padding: 60px 200px;
+  text-align: center;
+}
+
+.skills__imageContainer {
+  flex: 1;
+  /* width: 0px; */
+  height: 400px;
+  position: relative;
+  margin: 50px 0;
+}
+
+.footerText {
+  color: #fff;
+  font-size: 16px;
+}
+
+.btnContainer {
+  /* height: 20%; */
+  margin-top: 45px;
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.apply_btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 7px 40px 17px 40px; */
+  background-color: #df2127;
+}
+
+@media screen AND (max-width: 605px) {
+  .pressRelease {
+    padding: 20px;
+  }
+}
+
+@media screen AND (max-width: 1000px) {
+  .pressRelease {
+    padding: 50px;
+  }
+}

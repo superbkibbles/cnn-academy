@@ -21,7 +21,7 @@ import axios from "axios";
 import LinearProgress from "@mui/material/LinearProgress";
 import Modal from "@mui/material/Modal";
 import Router from "next/router";
-// import * as Yup from "yup";
+import * as Yup from "yup";
 
 import { countryList } from "../../constants/countries";
 import { heardAboutUs } from "../../constants/heardAboutus";
@@ -29,60 +29,85 @@ import styles from "./application.module.css";
 import { CircularProgress } from "@mui/material";
 import { Box } from "@mui/system";
 
-// const vlidationShema = Yup.object().shape({
-
-// });
+const validationSchema = Yup.object().shape({
+  v: Yup.string().required(),
+});
 
 const Application = () => {
   const [video, setVideo] = useState(null);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  console.log(progress);
-
   const onSubmit = async (req) => {
-    let formData = new FormData();
+    if (video) {
+      let formData = new FormData();
 
-    function getUUID() {
-      return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
-        (
-          c ^
-          (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-        ).toString(16)
-      );
-    }
-
-    formData.append("api_key", "652669247923232");
-    formData.append("file", video);
-    formData.append("public_id", getUUID());
-    formData.append("upload_preset", "ms6rua0l");
-    formData.append("timestamp", (Date.now() / 1000) | 0);
-    setLoading(true);
-    try {
-      const result = await axios.post(
-        "https://api.cloudinary.com/v1_1/erbilmc/upload",
-        formData,
-        {
-          onUploadProgress: (progressEvent) =>
-            setProgress(Math.round(progressEvent.loaded / progressEvent.total)),
-        }
-      );
-      req.video = result.data.secure_url;
-      try {
-        const res = await axios.post(
-          "https://sheet.best/api/sheets/7c775446-e23f-4f09-9afc-75ac596b0ae6",
-          req
+      function getUUID() {
+        return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+          (
+            c ^
+            (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+          ).toString(16)
         );
-        setLoading(false);
-        Router.push({
-          pathname: "/cnn-academy/en",
-        });
+      }
+
+      formData.append("api_key", "652669247923232");
+      formData.append("file", video);
+      formData.append("public_id", getUUID());
+      formData.append("upload_preset", "ms6rua0l");
+      formData.append("timestamp", (Date.now() / 1000) | 0);
+      setLoading(true);
+      try {
+        const result = await axios.post(
+          "https://api.cloudinary.com/v1_1/erbilmc/upload",
+          formData,
+          {
+            onUploadProgress: (progressEvent) =>
+              setProgress(progressEvent.loaded / progressEvent.total),
+            // setProgress(
+            //   Math.round(progressEvent.loaded / progressEvent.total)
+            // ),
+          }
+        );
+        req.video = result.data.secure_url;
+        try {
+          const res = await axios.post(
+            "https://sheet.best/api/sheets/7c775446-e23f-4f09-9afc-75ac596b0ae6",
+            req
+          );
+          setLoading(false);
+          Router.push({
+            pathname: "/cnn-academy/success",
+          });
+        } catch (e) {
+          console.log(e);
+        }
       } catch (e) {
         console.log(e);
       }
-    } catch (e) {
-      console.log(e);
     }
+  };
+
+  const containerStyles = {
+    height: 20,
+    width: "50%",
+    backgroundColor: "rgb(224 224 222 / 30%)",
+    borderRadius: 10,
+    margin: 10,
+  };
+
+  const fillerStyles = {
+    height: "100%",
+    width: `${progress * 100}%`,
+    backgroundColor: "#df2127",
+    borderRadius: "inherit",
+    textAlign: "right",
+  };
+
+  const labelStyles = {
+    padding: 5,
+    color: "white",
+    fontWeight: "bold",
   };
 
   return (
@@ -96,12 +121,20 @@ const Application = () => {
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             height: "100vh",
           }}
         >
           <CircularProgress />
+          <div style={containerStyles}>
+            <div style={fillerStyles}>
+              <span style={labelStyles}>{`${Math.round(
+                progress * 100
+              )}%`}</span>
+            </div>
+          </div>
         </Box>
       </Modal>
       <div className={styles.application}>
@@ -146,6 +179,7 @@ const Application = () => {
                 surname: "",
                 dateOfBirth: null,
                 email: "",
+                phone_number: "",
                 nationality: "Iraq",
                 countryofResidence: "Iraq",
                 arabicLanguageSkill: "",
@@ -156,10 +190,18 @@ const Application = () => {
                 videoFilmingSkills: "",
                 videoEditingSkills: "",
                 blurb: "",
+                v: "",
               }}
+              validationSchema={validationSchema}
               onSubmit={onSubmit}
             >
-              {({ values, handleChange, setFieldValue, handleSubmit }) => (
+              {({
+                values,
+                handleChange,
+                setFieldValue,
+                handleSubmit,
+                errors,
+              }) => (
                 <form onSubmit={handleSubmit}>
                   <Grid
                     alignItems="center"
@@ -212,6 +254,17 @@ const Application = () => {
                         required
                         id="email"
                         label="email"
+                      />
+                    </Grid>
+                    <Grid xs={12} md={5}>
+                      <TextField
+                        fullWidth
+                        name="phone_number"
+                        value={values.phone_number}
+                        onChange={handleChange}
+                        required
+                        id="phone_number"
+                        label="Phone Number"
                       />
                     </Grid>
                     <Grid xs={12} md={5}>
@@ -463,19 +516,34 @@ const Application = () => {
                         />
                       </>
                     ) : (
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        component="label"
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                        }}
                       >
-                        Upload File
-                        <input
-                          type="file"
-                          hidden
-                          accept="video/mp4,video/x-m4v,video/*"
-                          onChange={(e) => setVideo(e.target.files[0])}
-                        />
-                      </Button>
+                        <Button
+                          variant="contained"
+                          color="secondary"
+                          component="label"
+                        >
+                          Upload File
+                          <input
+                            type="file"
+                            hidden
+                            name="v"
+                            accept="video/mp4,video/x-m4v,video/*"
+                            onChange={(e) => {
+                              handleChange(e);
+                              setVideo(e.target.files[0]);
+                            }}
+                          />
+                        </Button>
+                        <div style={{ marginTop: 7, color: "#df2127" }}>
+                          {errors.v && "Please upload the video"}
+                        </div>
+                      </div>
                     )}
                   </Grid>
                   <Grid xs={12} md={5} marginTop={3}>

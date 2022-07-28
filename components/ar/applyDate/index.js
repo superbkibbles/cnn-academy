@@ -20,8 +20,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 60 }}
             className={styles.applyDate__heading}
           >
-            <span style={{ fontWeight: "normal" }}>حزيران </span> 2022 -
-            <span style={{ fontWeight: "normal" }}> تموز </span>
+            <span style={{ fontWeight: "normal" }}>تموز </span> 2022 -
+            <span style={{ fontWeight: "normal" }}> 20 آب </span>
             2022
           </h2>
 
@@ -32,8 +32,8 @@ const ApplyDate = () => {
             style={{ marginTop: 0, marginBottom: 30 }}
             className={styles.applyDate__heading}
           >
-            <span style={{ fontWeight: "normal" }}>تموز</span> 2022 -
-            <span style={{ fontWeight: "normal" }}> آب</span>
+            <span style={{ fontWeight: "normal" }}>آب</span> 2022 -
+            <span style={{ fontWeight: "normal" }}> أيلول </span>
             2022
           </h2>
         </div>

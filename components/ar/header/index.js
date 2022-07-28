@@ -22,7 +22,7 @@ const item = {
   show: { opacity: 1 },
 };
 
-const Header = () => {
+const Header = ({ title }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -56,13 +56,16 @@ const Header = () => {
               className={styles.mobileNavigation__links}
             >
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#overview">ملخص الدورة</Link>
+                <Link href="/cnn-academy/ar#overview">ملخص الدورة</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#structure">هيكل الدورة</Link>
+                <Link href="/cnn-academy/ar#structure">هيكل الدورة</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">تقديم</Link>
+                <Link href="/cnn-academy/ar#apply">تقديم</Link>
+              </motion.li>
+              <motion.li variants={item} onClick={() => setToggle(false)}>
+                <Link href="/cnn-academy/ar/pressrelease">بيان صحفي</Link>
               </motion.li>
             </motion.ul>
 
@@ -98,18 +101,23 @@ const Header = () => {
             <nav className={styles.nav}>
               <ul className={styles.navigation}>
                 <li>
-                  <Link href="#overview">
+                  <Link href="/cnn-academy/ar#overview">
                     <a>ملخص الدورة</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#structure">
+                  <Link href="/cnn-academy/ar#structure">
                     <a>هيكل الدورة</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#apply">
+                  <Link href="/cnn-academy/ar#apply">
                     <a>تقديم</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cnn-academy/ar/pressrelease">
+                    <a>بيان صحفي</a>
                   </Link>
                 </li>
               </ul>
@@ -156,21 +164,34 @@ const Header = () => {
               </motion.div>
             </div>
 
-            <div className={styles.slogan}>
-              <motion.h2
-                whileInView={{ opacity: [0, 1], x: [10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                ابدأ مسيرتك الصحفيّة بتدريب من قادة المهنة
-              </motion.h2>
-              <motion.h3
-                whileInView={{ opacity: [0, 1], x: [-10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                CNN تشارك أسرار المهنة مع الصحفيين الطموحين في العراق عبر دورة
-                مدتها 12 أسبوعاً
-              </motion.h3>
-            </div>
+            {title ? (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                  style={{ fontSize: 25 }}
+                >
+                  {title}
+                </motion.h2>
+              </div>
+            ) : (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  ابدأ مسيرتك الصحفيّة بتدريب من قادة المهنة
+                </motion.h2>
+                <motion.h3
+                  whileInView={{ opacity: [0, 1], x: [-10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  CNN تشارك أسرار المهنة مع الصحفيين الطموحين في العراق عبر دورة
+                  مدتها 12 أسبوعاً
+                </motion.h3>
+              </div>
+            )}
+
             {/* <div className={styles.header__apply}>
             <a
               target={"_blank"}

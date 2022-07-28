@@ -1,8 +1,24 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import "../styles/globals.css";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("1379713562514600"); // facebookPixelId
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
+
   return (
     <>
       <Head>
@@ -28,7 +44,7 @@ function MyApp({ Component, pageProps }) {
   // fbq('track', 'PageView')}
 </Script> */}
 
-        <noscript
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html: `
           <img
@@ -39,9 +55,9 @@ function MyApp({ Component, pageProps }) {
           />
           `,
           }}
-        ></noscript>
+        ></noscript> */}
       </Head>
-      <Script id="facebook-pixel">
+      {/* <Script id="facebook-pixel">
         {` !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -52,7 +68,7 @@ function MyApp({ Component, pageProps }) {
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1379713562514600');
   fbq('track', 'PageView');`}
-      </Script>
+      </Script> */}
       <Component {...pageProps} />
     </>
   );

@@ -22,7 +22,7 @@ const item = {
   show: { opacity: 1 },
 };
 
-const Header = () => {
+const Header = ({ title }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -56,13 +56,16 @@ const Header = () => {
               className={styles.mobileNavigation__links}
             >
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#overview">Course Overview</Link>
+                <Link href="/cnn-academy#overview">Course Overview</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#structure">Course Structure</Link>
+                <Link href="/cnn-academy#structure">Course Structure</Link>
               </motion.li>
               <motion.li variants={item} onClick={() => setToggle(false)}>
-                <Link href="#apply">Apply</Link>
+                <Link href="/cnn-academy#apply">Apply</Link>
+              </motion.li>
+              <motion.li variants={item} onClick={() => setToggle(false)}>
+                <Link href="/cnn-academy/pressrelease">Press Release</Link>
               </motion.li>
             </motion.ul>
 
@@ -98,18 +101,23 @@ const Header = () => {
             <nav className={styles.nav}>
               <ul className={styles.navigation}>
                 <li>
-                  <Link href="#overview">
+                  <Link href="/cnn-academy#overview">
                     <a>Course Overview</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#structure">
+                  <Link href="/cnn-academy#structure">
                     <a>Course Structure</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#apply">
+                  <Link href="/cnn-academy#apply">
                     <a>Apply</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cnn-academy/pressrelease">
+                    <a>Press Release</a>
                   </Link>
                 </li>
               </ul>
@@ -156,22 +164,35 @@ const Header = () => {
               </motion.div>
             </div>
 
-            <div className={styles.slogan}>
-              <motion.h2
-                whileInView={{ opacity: [0, 1], x: [10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                Step into professional journalism by training with the domain’s
-                leader
-              </motion.h2>
-              <motion.h3
-                whileInView={{ opacity: [0, 1], x: [-10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                CNN shares its trade secrets with aspiring journalists in Iraq
-                through a 12-week course
-              </motion.h3>
-            </div>
+            {title ? (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                  style={{ fontSize: 24 }}
+                >
+                  {title}
+                </motion.h2>
+              </div>
+            ) : (
+              <div className={styles.slogan}>
+                <motion.h2
+                  whileInView={{ opacity: [0, 1], x: [10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Step into professional journalism by training with the
+                  domain’s leader
+                </motion.h2>
+                <motion.h3
+                  whileInView={{ opacity: [0, 1], x: [-10, 0] }}
+                  transition={{ duration: 0.5 }}
+                >
+                  CNN shares its trade secrets with aspiring journalists in Iraq
+                  through a 12-week course
+                </motion.h3>
+              </div>
+            )}
+
             {/* <div className={styles.header__apply}>
             <a
               target={"_blank"}
