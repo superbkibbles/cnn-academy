@@ -18,10 +18,10 @@ import Radio from "@mui/material/Radio";
 import { Formik } from "formik";
 import Button from "@mui/material/Button";
 import axios from "axios";
-import LinearProgress from "@mui/material/LinearProgress";
 import Modal from "@mui/material/Modal";
 import Router from "next/router";
 import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
 
 import { countryList } from "../../constants/countries";
 import { heardAboutUs } from "../../constants/heardAboutus";
@@ -33,6 +33,10 @@ const validationSchema = Yup.object().shape({
   v: Yup.string().required(),
 });
 
+const serviceID = "service_5b90nmc";
+const templateID = "template_xsik0p1";
+const publicKeys = "qOp-Vvf02fFsdJKz0";
+
 const Application = () => {
   const [video, setVideo] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -41,7 +45,6 @@ const Application = () => {
   const onSubmit = async (req) => {
     if (video) {
       let formData = new FormData();
-
       function getUUID() {
         return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
           (
@@ -50,7 +53,6 @@ const Application = () => {
           ).toString(16)
         );
       }
-
       formData.append("api_key", "652669247923232");
       formData.append("file", video);
       formData.append("public_id", getUUID());
@@ -80,10 +82,34 @@ const Application = () => {
             pathname: "/cnn-academy/success",
           });
         } catch (e) {
-          console.log(e);
+          emailjs.send(
+            serviceID,
+            templateID,
+            {
+              forename: req.forename,
+              surname: req.surname,
+              email: req.email,
+              phone_number: req.phone_number,
+              video: req.video,
+              message: "error in best sheet",
+            },
+            publicKeys
+          );
         }
       } catch (e) {
-        console.log(e);
+        emailjs.send(
+          serviceID,
+          templateID,
+          {
+            forename: req.forename,
+            surname: req.surname,
+            email: req.email,
+            phone_number: req.phone_number,
+            video: "none",
+            message: "error occuered when trying to publish the video",
+          },
+          publicKeys
+        );
       }
     }
   };
@@ -191,6 +217,7 @@ const Application = () => {
                 videoEditingSkills: "",
                 blurb: "",
                 v: "",
+                iam: "",
               }}
               validationSchema={validationSchema}
               onSubmit={onSubmit}
@@ -486,6 +513,30 @@ const Application = () => {
                           id="Blurb"
                           label="Blurb"
                         />
+                      </FormControl>
+                    </Grid>
+                    <Grid xs={12} md={5}>
+                      <FormControl fullWidth required>
+                        <InputLabel id="Iam">I am ...</InputLabel>
+                        <Select
+                          labelId="Iam"
+                          id="Iam"
+                          name="iam"
+                          label="Iam ..."
+                          value={values.iam}
+                          onChange={handleChange}
+                          fullWidth
+                          required
+                        >
+                          {[
+                            "University Student / Fresh Graduate: $800",
+                            "Other Applicants: $ 1,500",
+                          ].map((el) => (
+                            <MenuItem key={el} value={el}>
+                              {el}
+                            </MenuItem>
+                          ))}
+                        </Select>
                       </FormControl>
                     </Grid>
                   </Grid>

@@ -22,7 +22,7 @@ const ApplyDate = () => {
           >
             <span style={{ fontWeight: "normal" }}>تەمموزی</span> ٢٠٢٢ -
             <span style={{ fontWeight: "normal", marginRight: 5 }}>
-              ٢٠ ئاب{" "}
+              ٢٥ ئاب{" "}
             </span>
             ٢٠٢٢
           </h2>
@@ -48,15 +48,8 @@ const ApplyDate = () => {
           راگەیاندن بگریت. زوو خۆت تۆمار بکە
         </p>
         <div className={styles.btnContainer}>
-          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
           <Link href="/cnn-academy/application">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.apply_btn}
-            >
-              جێبەجێ بکە
-            </a>
+            <a className={styles.apply_btn}>جێبەجێ بکە</a>
           </Link>
         </div>
       </div>

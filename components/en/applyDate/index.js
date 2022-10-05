@@ -21,7 +21,7 @@ const ApplyDate = () => {
             className={styles.applyDate__heading}
           >
             <span style={{ fontWeight: "normal" }}>July</span> 2022 -
-            <span style={{ fontWeight: "normal" }}> 20 August </span>
+            <span style={{ fontWeight: "normal" }}> 25 August </span>
             2022
           </h2>
 
@@ -43,15 +43,8 @@ const ApplyDate = () => {
           the leaders of the journalism profession. Hurry up to apply.
         </p>
         <div className={styles.btnContainer}>
-          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
           <Link href="/cnn-academy/application">
-            <a
-              // target="_blank"
-              // rel="noopener noreferrer"
-              className={styles.apply_btn}
-            >
-              Apply
-            </a>
+            <a className={styles.apply_btn}>Apply</a>
           </Link>
         </div>
       </div>

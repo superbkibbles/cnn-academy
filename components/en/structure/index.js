@@ -28,15 +28,13 @@ const Structure = () => {
               seminar)
             </li>
             <li>
-              <span style={{ fontWeight: "bold" }}>
-                Week Four, September 6th
-              </span>{" "}
+              <span style={{ fontWeight: "bold" }}>Week Four, October 6th</span>{" "}
               The Art of Storytelling I (CNN Academy Hub course + virtual live
               seminars)
             </li>
             <li>
               <span style={{ fontWeight: "bold" }}>
-                Week Five, September 13th
+                Week Five, October 13th
               </span>{" "}
               The Art of Storytelling II (CNN Academy Hub course + virtual live
               seminars)

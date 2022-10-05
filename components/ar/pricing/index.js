@@ -9,10 +9,10 @@ const Pricing = () => {
         </h2>
         <div className={styles.pricing__prices}>
           <h2 className={styles.heading__border}>
-            الطلاب المستقلون 800 دولار أمريكي
+            الطلاب / الخریجین الجدد 800 دولار أمريكي
           </h2>
           <h2 className={styles.heading}>
-            العاملون في مجال الإعلام 1500 دولار أمريكي
+            المتقدمون الآخرون 1500 دولار أمريكي
           </h2>
         </div>
       </div>

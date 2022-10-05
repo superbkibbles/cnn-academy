@@ -9,11 +9,13 @@ const Pricing = () => {
         </h2>
         <div className={styles.pricing__prices}>
           <h2 className={styles.heading__border}>
-            <span style={{ fontWeight: "normal" }}>Independent students</span>{" "}
+            <span style={{ fontWeight: "normal" }}>
+              Students /<span style={{ float: "left" }}> Fresh graduates</span>
+            </span>{" "}
             <span>US $800</span>
           </h2>
           <h2 className={styles.heading}>
-            <span style={{ fontWeight: "normal" }}>Media employees</span>
+            <span style={{ fontWeight: "normal" }}>Other Applicants</span>
             <span>US $1500</span>
           </h2>
         </div>

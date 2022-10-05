@@ -21,7 +21,7 @@ const ApplyDate = () => {
             className={styles.applyDate__heading}
           >
             <span style={{ fontWeight: "normal" }}>تموز </span> 2022 -
-            <span style={{ fontWeight: "normal" }}> 20 آب </span>
+            <span style={{ fontWeight: "normal" }}> 25 آب </span>
             2022
           </h2>
 
@@ -46,15 +46,8 @@ const ApplyDate = () => {
           سارعوا بالتسجيل.
         </p>
         <div className={styles.btnContainer}>
-          {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdi9tDudOSLk51zDQu29qRIrG8J9oaMRYwJvWZ5GCO9CEZC_A/viewform?usp=pp_url&entry.1438322629=jh@mail.com&entry.1888033306=Iraq&entry.1969478913=iraq"> */}
           <Link href="/cnn-academy/application">
-            <a
-              // target="_blank"
-              // rel="noopener noreferrer"
-              className={styles.apply_btn}
-            >
-              تقديم
-            </a>
+            <a className={styles.apply_btn}>تقديم</a>
           </Link>
         </div>
       </div>
